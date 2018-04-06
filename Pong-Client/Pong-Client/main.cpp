@@ -1,10 +1,14 @@
 #include <SFML/Network.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/System/FileInputStream.hpp>
 #include "Enumerators.h"
 #include "ServerListener.h"
 #include "GameSimulation.h"
 #include <iostream>
 #include "GameRenderer.h"
+#include <fstream>
+#include <stdio.h>
+
 using namespace Pong;
 
 bool isMovingUp = false;
@@ -35,7 +39,7 @@ void handlePlayerInput(sf::Keyboard::Key key, bool isPressed, sf::TcpSocket *soc
 		wasMovementInput = true;
 		isMovingDown = isPressed;
 	}
-	
+
 	if (wasMovementInput)
 	{
 		if (isMovingUp == isMovingDown)
@@ -60,7 +64,25 @@ int main()
 	sf::Clock clock;
 	sf::Time timeSinceLastUpdate = sf::Time::Zero;
 
-	sf::Socket::Status status = socket->connect("localhost", 53000);
+	//Read IP from file
+
+	std::string server_ip;
+	std::ifstream file;
+	file.open("config.txt", std::ios::in);
+	if (!file.is_open()){
+		printf("Can't open file!");
+	}else {
+		printf("Opened file \n");
+		std::getline(file, server_ip);
+	}
+	file.close();
+
+	sf::Socket::Status status = socket->connect(server_ip, 53000);
+	{
+		std::string print = "Trying to connect to '" + server_ip + "' \n";
+		printf(print.c_str());
+	}
+
 	if (status != sf::Socket::Done)
 	{
 		printf("Connection failure! \n");
