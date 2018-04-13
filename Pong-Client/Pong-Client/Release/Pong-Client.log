@@ -1,9 +1,10 @@
-﻿Build started 6.4.2018 15:52:38.
+﻿Build started 13.4.2018 16:01:19.
      1>Project "C:\Users\markushyv\Documents\SFML-Online-Pong\Pong-Client\Pong-Client\Pong-Client.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\markushyv\Documents\SFML-Online-Pong\Pong-Client\..\SFML-2.4.1\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-     1>main.cpp(124): warning C4305: 'argument' : truncation from 'double' to 'float'
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\markushyv\Documents\SFML-Online-Pong\Pong-Client\..\SFML-2.4.1\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameSimulation.cpp
+         GameSimulation.cpp
+     1>GameSimulation.cpp(111): warning C4018: '<' : signed/unsigned mismatch
+     1>GameSimulation.cpp(275): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\markushyv\Documents\SFML-Online-Pong\Pong-Client\Release\Pong-Client.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\markushyv\Documents\SFML-Online-Pong\Pong-Client\..\SFML-2.4.1\lib" "sfml-graphics.lib" "sfml-window.lib" "sfml-network.lib" "sfml-system.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\markushyv\Documents\SFML-Online-Pong\Pong-Client\Release\Pong-Client.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\markushyv\Documents\SFML-Online-Pong\Pong-Client\Release\Pong-Client.lib" /MACHINE:X86 /SAFESEH Release\GameRenderer.obj
          Release\GameSimulation.obj
@@ -16,4 +17,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.17
+Time Elapsed 00:00:04.10

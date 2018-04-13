@@ -309,9 +309,9 @@ namespace Pong{
 		ball.box.vx *= remainingTime;
 		ball.box.vy *= remainingTime;
 		if (abs(normalx) > 0.0001f)
-			ball.box.vx = -ball.box.vx;
+			ball.box.vx = -ball.box.vx * 1.1f;;
 		if (abs(normaly) > 0.0001f)
-			ball.box.vy = -ball.box.vy;
+			ball.box.vy = -ball.box.vy * 1.1f;;
 	}
 
 	GameSimulation::RectangleObject::RectangleObject(sf::Vector2f size)
